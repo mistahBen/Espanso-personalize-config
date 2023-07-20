@@ -26,3 +26,28 @@ Contains some basic triggers that reference the time/date variables, as well as 
 #### Semi-colon leader for many triggers
 This is definitely a personal preference, but I like to have my replacements accessed without the need to hold the shift key if possible. I have a few that use the Espanso-conventional colon (":") but they are generally reserved for more 'system-literal' types of actions.
 
+
+# Installation
+
+⚠️**First backup your Espanso config directory**
+
+The simplest way is to clone this repository and then copy the contents of this folder into their respective locations in *your* Espanso directory.
+
+If you do not backup your `default.yml` file this one will overwrite it. If you do not want to overwrite this file, simply add the lines
+
+```extra_includes:
+  - "../_global_vars.yml"```
+>*(be cautious of indentation)*
+
+## Edit `_global_vars.yml`
+In your preferred text editor, open the `_global_vars.yml` file and edit the "echo" field to your preferences.
+
+## Ignoring the _global_vars
+If you have any expansion files you would like to ignore the global variables, include the text line 
+
+```excludes: 
+    - "../_global_vars.yml"```
+
+to the top of the YAML file (at least above the "matches:" line).
+
+
