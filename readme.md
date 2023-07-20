@@ -32,7 +32,7 @@ This is definitely a personal preference, but I like to have my replacements acc
 
 ⚠️**First backup your Espanso config directory**
 
-The simplest way is to clone this repository and then copy the contents of this folder into their respective locations in *your* Espanso directory.
+The simplest way to use this configuration is to clone this repository and then copy the contents of this folder into their respective locations in *your* Espanso directory.
 
 If you do not backup your `default.yml` file this one will overwrite it. If you do not want to overwrite this file, simply add the lines
 
