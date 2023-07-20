@@ -2,6 +2,7 @@
 
 This is a small, simple repository for use with [Espanso](https://espanso.org/).
 Feel free to take these as inspiration or use them directly.
+> a "full featured" version of this repo with LOTS more match files is located here: [Espanso-pub](https://github.com/mistahBen/espanso-pub)
 
 # Key features
 ## _global_vars.yml
