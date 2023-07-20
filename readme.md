@@ -1,4 +1,4 @@
-# Espanso replacement/expansions pack
+# A 'lean' Espanso configuration with personalization variables
 
 This is a small, simple repository for use with [Espanso](https://espanso.org/).
 Feel free to take these as inspiration or use them directly.
