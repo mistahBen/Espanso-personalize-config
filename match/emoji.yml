@@ -1,0 +1,253 @@
+# Emoji fill ins
+
+matches:
+  # basic reactions/faces
+  - triggers: [";tu", ";thumbsup"]
+    replace: "👍"
+  - triggers: [";td", ";thumbsdown"]
+    replace: "👎"
+  - triggers: [";fc", ";fingerscrossed"]
+    replace: "🤞"
+  - trigger: ";esm" # 'e' for emoji
+    replace: "🙂"
+  - trigger: ";usm"
+    replace: "🙃" 
+  - trigger: ";dizzy"
+    replace: "😵‍💫"
+  - trigger: ";ouch"
+    replace: "😵"
+  - trigger: ";lol"
+    replace: "😆"
+  - triggers: [";hmm", ";thinking"]
+    replace: '🤔'
+  - trigger: ';sorry'
+    replace: '😔'
+  - trigger: ';eyebrow'
+    replace: '🤨'
+  - trigger: ";smirk"
+    replace: '😏'
+  - triggers: [";:/", ';meh', ";slant"]
+    replace: "🫤"
+  - trigger: ";cold"
+    replace: "🥶"
+  - trigger: ";alert"
+    replace: "⚠️"
+  - trigger: ";tool"
+    replace: "🛠️"
+  - trigger: ";paper"
+    replace: "📝"
+  - trigger: "eshrug"
+    replace: "¯\\_(ツ)_/¯"
+  - trigger: ";idea"
+    replace: "💡"
+  - trigger: ";wizard"
+    replace: "🧙‍♂️"
+  - trigger: ";lock"
+    replace: "🔐"
+  - trigger: ";check"
+    replace: "☑️"
+  - trigger: ";gcheck"
+    replace: "✅"
+  - triggers: [';x', ';redx', ';wrong']
+    replace: '❌'
+  - triggers: [";trademark", ";etm"]
+    replace: "™️"
+  - trigger: ";map"
+    replace: "🗺️"
+  - trigger: ";meat"
+    replace: "🍖"
+  - trigger: ";wink"
+    replace: "😉"
+  - trigger: ";robot"
+    replace: "🤖"
+  - triggers: [';sleepy', ';tired']
+    replace: "\U0001F62A"
+  - trigger: ';zipped'
+    replace: "\U0001F910"
+  - trigger: ";mask"
+    replace: "\U0001F637"
+  - trigger: ';game'
+    replace: "\U0001F47E"
+  - trigger: ';clap'
+    replace: "\U0001F44F"
+  - triggers: [';plus1', ';1+']
+    replace: "\U0001F44D"
+  - triggers: [';peace', ';victory']
+    replace: ✌️
+  - trigger: ';research'
+    replace: "\U0001F469‍\U0001F52C"
+  - triggers: [';warn', ';wrongway', ';noentry']
+    replace: ⛔️
+  - trigger: ";ok"
+    replace: "🆗"
+  - trigger: ';salute'
+    replace: "🫡"
+  - trigger: ";box"
+    replace: "📦"
+  - trigger: ";mail"
+    replace: '📩'
+  - trigger: ";files"
+    replace: "🗂️"
+  - trigger: ';unlock'
+    replace: "🔓"
+  - triggers: [";crystalball", ";orb"]
+    replace: "🔮"
+  - trigger: ";hourglass"
+    replace: "⏳"
+  - triggers: [";summer", ";beach"]
+    replace: "🏝️"
+  - trigger: ";student"
+    replace: "🧑‍🎓👩‍🎓"
+  - trigger: ";backpack"
+    replace: "🎒"
+  - trigger: ";bus"
+    replace: "🚌"
+  - trigger: ";teacher"
+    replace: "🧑‍🏫"
+  - triggers: [";cowboy", ";howdy"]
+    replace: "🤠"
+  - trigger: ";omg"
+    replace: "😲"
+  - trigger: ";mindblown"
+    replace: '🤯'
+  - trigger: ';dead'
+    replace: '💀'
+  - trigger: ';shake'
+    replace: '🤝'
+  - trigger: ';look'
+    replace: '👀'
+  - trigger: ';raisehand'
+    replace: '🙋‍♂️'
+  - trigger: ';judge'
+    replace: '🧑‍⚖️'
+  
+  - triggers: [';angry', ';mad']
+    replace: '😤'
+  - triggers: [';angry', ';mad']
+    replace: '😡'
+  - triggers: [';angry', ';mad']
+    replace: '😠'
+  - triggers: [';angry', ';mad', ';swear', ';cuss']
+    replace: '🤬'
+
+  # technology
+  - triggers: [";battery", ';batfull']
+    replace: "🔋"
+  - trigger: ";lowbatt"
+    replace: "🪫"
+  - trigger: ';plug'
+    replace: "\U0001F50C"
+  - triggers: [";settings", ';gear']
+    replace: "⚙️"
+  - trigger: ";ewifi"
+    replace: "🛜"
+  - trigger: ";signal"
+    replace: "📶"
+  - triggers: [';computer',';laptop']
+    replace: '💻'
+  - trigger: ';eusers'
+    replace: '🧑‍💻👩‍💻'
+  - triggers: [";disk", ";save"]
+    replace: "💾"
+  - trigger: ';USAf'
+    replace: '🇺🇸'
+  - trigger: ";cricket"
+    replace: "🏏"
+  - triggers: [';burger', ";hamburger"]
+    replace: '🍔'
+  
+
+
+# Animals and related
+  - trigger: ';unicorn'
+    replace: '🦄'
+  - trigger: ';camel'
+    replace: '🐪'
+  - trigger: ';pig'
+    replace: '🐖'
+  - trigger: ";dog"
+    replace: "🐶"
+  - trigger: ";dwalk"
+    replace: '🐕‍🦺'
+  - trigger: ';paw'
+    replace: '🐾'
+  - trigger: ';bone'
+    replace: '🦴'
+  - triggers: [";cat", ';jiji']
+    replace: '🐈‍⬛'
+  - trigger: ';happycat'
+    replace: '😺'
+  - trigger: ';bee'
+    replace: 🐝
+  - trigger: ';turtle'
+    replace: '🐢'
+  - trigger: ';sheep'
+    replace: '🐑'
+
+#objects
+  - triggers: [';bike', ';bicycle']
+    replace: '🚲'
+  - trigger: ";phone"
+    replace: "☎️"
+  - trigger: ';car'
+    replace: '🚗'
+  - trigger: ';compass'
+    replace: '🧭'
+  - trigger: ";thread"
+    replace: "🧵"
+  - trigger: ';ecal' # 'emoji', again.
+    replace: '📆'
+  - trigger: ';hammer'
+    replace: '🔨'
+  
+# plants, weather, locations
+  - trigger: ";school"
+    replace: "🏫"
+  - trigger: ';pine'
+    replace: '🌲'
+  - trigger: ';tree'
+    replace: '🌳'
+  - triggers: [';fall',';autumn']
+    replace: '🍂'
+  - trigger: ';cactus'
+    replace: '🌵'
+  - trigger: ';city'
+    replace: '🌆'
+  - triggers: [';gas', ';fuel']
+    replace: '⛽'
+  - trigger: ';takeoff'
+    replace: '🛫'
+  - trigger: ';landing'
+    replace: '🛬'
+  - trigger: ';flight'
+    replace: '✈️'
+  - triggers: [';rocket', ';launch']
+    replace: '🚀'
+  - trigger: ';home'
+    replace: '🏡'
+  - trigger: ';neighborhood'
+    replace: '🏘️'
+  - trigger: ';beach'
+    replace: '🏖️'
+  
+# symbols and shapes
+  - trigger: ';rdot'
+    replace: '🔴'
+  - trigger: ';gdot'
+    replace: '🟢'
+  - trigger: ';bdot'
+    replace: '⚫'
+  - triggers: [';radioactive', ';nuclear']
+    replace: '☢️'
+  - trigger: ';biohazard'
+    replace: '☣️'
+  - trigger: ";!"
+    replace: "❗️"
+  - triggers: [";?", ';qmark']
+    replace: "❓"
+  - trigger: ";cool"
+    replace: "🆒"
+  - trigger: ";new"
+    replace: "🆕"
+  - trigger: ";stop"
+    replace: "🛑"

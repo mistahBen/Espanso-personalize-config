@@ -1,0 +1,81 @@
+# 'true' global vars
+global_vars:
+  - name: paste_word
+    type: "clipboard"
+
+  - name: imgdir
+    type: echo
+    params:
+      echo: '$CONFIG/images'
+
+  - name: text_editor
+    type: echo
+    params:
+      echo: 'code' # VScode by default, change to binary name/path as needed
+
+
+# Personalization
+  # core
+  - name: first_name
+    type: echo
+    params:
+      echo: 'YOUR_FIRST_NAME'
+  - name: last_name
+    type: echo
+    params:
+      echo: 'YOUR_LAST_NAME'
+  - name: p_email
+    type: echo
+    params: 
+      echo: 'changethis@address.com'
+# Work details
+  - name: myusername
+    type: echo
+    params:
+      echo: 'USERNAME'
+  - name: work_domain
+    type: echo
+    params:
+      echo: 'WORKDOMAIN.com'
+
+  - name: work_email
+    type: echo
+    params:
+      echo: '{{username}}@{{work_domain}}'
+
+  - name: jobDesc
+    type: echo
+    params:
+      echo: 'Espanso wizard'
+
+# Dates and Time
+
+  - name: mydate
+    type: date
+    params:
+      format: "%Y-%m-%d"
+
+  - name: eurodate
+    type: date
+    params:
+      format: "%d/%m%Y"
+
+  - name: usdate
+    type: date
+    params:
+      format: "%m/%d/%Y"
+
+  - name: tdate # YMD no separators
+    type: date
+    params:
+      format: "%Y%m%d"
+
+  - name: stime # HH:MM AM/PM
+    type: date
+    params:
+      format: "%H:%M %P"
+
+  - name: longdt # long date time
+      type: date
+      params:
+        format: "{{mydate}}@{{stime}}"

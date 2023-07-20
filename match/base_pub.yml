@@ -1,0 +1,75 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+matches:
+
+  - trigger: "espanos"
+    replace: "espanso"
+# Time triggers
+
+  - trigger: ";date"
+    replace: "{{date}}"
+  - trigger: ';usdate'
+    replace: "{{usdate}}"
+  - triggers: [';eudate', ';eurodate']
+    replace: "{{eurodate}}"
+  - trigger: ";tdate"
+    replace: "{{tdate}}"
+
+  - triggers: [";fdate", ';ftime'] # full date with time
+    replace: "{{longdt}}"
+ 
+# time only ('short time')
+  - trigger: ';stime'
+    replace: "{{stime}}"
+
+# Espanso trigger-making expansions.
+  - trigger: ':trig'
+    replace: "- trigger: ';'\n  replace: '$|$'"
+  - trigger: ";ptrig" # paste clipboard to replacement
+    replace: "- trigger: ';$|$'\n    replace: '{{paste_word}}'"
+  - trigger: ";strig"
+    replace: "- triggers: [';$|$']\n    replace: '{{paste_word}}'"
+  - trigger: ';itrig' # for images
+    replace: "- trigger: ';'\n  image_path: '{{imgdir}}/$|$'"
+
+
+# simple espanso yml template from form response
+  - trigger: ";espt"
+    replace: |
+                - trigger: "{{key_combo.input}}"
+                  replace: $|$
+    vars:
+      - name: key_combo
+        type: form
+        params:
+          layout: "Key combo: [[input]]"
+          fields:
+            input:
+
+
+#For more information, visit the docs: https://espanso.org/docs/
+
+  
+  - trigger: ":editmatch"
+    replace: "{{edit_file}}"
+    vars:
+      - name: files
+        type: shell
+        params:
+          cmd: "find $CONFIG/match -maxdepth 1"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select file:
+            [[file]]
+          fields:
+            file:
+              type: list
+              values: "{{files}}"
+      - name: edit_file
+        type: shell
+        params:
+          cmd: '{{text_editor}} {{form1.file}}'
