@@ -36,8 +36,10 @@ The simplest way is to clone this repository and then copy the contents of this 
 
 If you do not backup your `default.yml` file this one will overwrite it. If you do not want to overwrite this file, simply add the lines
 
-```extra_includes:
-  - "../_global_vars.yml"```
+```
+extra_includes:
+  - "../_global_vars.yml"
+```
 >*(be cautious of indentation)*
 
 ## Edit `_global_vars.yml`
@@ -45,10 +47,10 @@ In your preferred text editor, open the `_global_vars.yml` file and edit the "ec
 
 ## Ignoring the _global_vars
 If you have any expansion files you would like to ignore the global variables, include the text line 
-
-```excludes: 
-    - "../_global_vars.yml"```
-
+```
+  excludes: 
+    - "../_global_vars.yml"
+```
 to the top of the YAML file (at least above the "matches:" line).
 
 
