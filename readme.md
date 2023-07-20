@@ -40,17 +40,20 @@ If you do not backup your `default.yml` file this one will overwrite it. If you 
 extra_includes:
   - "../_global_vars.yml"
 ```
+
 >*(be cautious of indentation)*
 
 ## Edit `_global_vars.yml`
 In your preferred text editor, open the `_global_vars.yml` file and edit the "echo" field to your preferences.
 
 ## Ignoring the _global_vars
-If you have any expansion files you would like to ignore the global variables, include the text line 
+If you have any expansion files you would like to ignore the global variables, include the text line
+
 ```
   excludes: 
     - "../_global_vars.yml"
 ```
+
 to the top of the YAML file (at least above the "matches:" line).
 
 
