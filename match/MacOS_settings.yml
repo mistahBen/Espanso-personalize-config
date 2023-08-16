@@ -1,0 +1,44 @@
+matches:
+#MacOS System preferences
+# Open System settings/preference pane from list
+
+- trigger: ":syspref"
+    replace: "{{edit_file}}"
+    vars:
+      - name: files
+        type: shell
+        params:
+          cmd: "find /System/Library/PreferencePanes -maxdepth 1"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select file:
+            [[file]]
+          fields:
+            file:
+              type: list
+              values: "{{files}}"
+      - name: edit_file
+        type: shell
+        params:
+          cmd: |
+                open {{form1.file}}
+# shortcuts
+  - trigger: ":DX"
+    replace: "{{displays}}"
+    label: "Open Display SysPrefs"
+    vars:
+      - name: displays
+        type: shell
+        params:
+          cmd: "open /System/Library/PreferencePanes/Displays.prefPane"
+
+- trigger: ":printer"
+    replace: "{{printers}}"
+    label: "Open Printers SysPrefs"
+    vars:
+      - name: printers
+        type: shell
+        params:
+          cmd: "open /System/Library/PreferencePanes/PrintAndScan.prefPane"
