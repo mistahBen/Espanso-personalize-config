@@ -1,6 +1,6 @@
 # 'true' global vars
 global_vars:
-  - name: paste_word
+  - name: paste
     type: "clipboard"
 
   - name: imgdir
@@ -11,7 +11,13 @@ global_vars:
   - name: text_editor
     type: echo
     params:
-      echo: 'code' # VScode by default, change to binary name/path as needed
+      echo: '$HOME/Visual\ Studio\ Code.app' # VScode by default, change to binary name/path as needed
+
+  - name: nudge_ui # for scripts. displays 'nudge' style notification. Mac only.
+    type: echo
+    params:
+      echo: |
+              osascript -e 'display notification "[[title]]" with title "[[message]]"
 
 
 # Personalization
@@ -19,15 +25,23 @@ global_vars:
   - name: first_name
     type: echo
     params:
-      echo: 'YOUR_FIRST_NAME'
+      echo: 'NAME'
+  - name: myname # alternate ref for first_name. can also be used for nickname
+    type: echo
+    params:
+      echo: '{{first_name}}'
+
   - name: last_name
     type: echo
     params:
-      echo: 'YOUR_LAST_NAME'
+      echo: 'LASTNAME'
+  
+  #personal email, simple
   - name: p_email
     type: echo
     params: 
-      echo: 'changethis@address.com'
+      echo: 'alexanderb@district65.net'
+
 # Work details
   - name: myusername
     type: echo
@@ -36,20 +50,24 @@ global_vars:
   - name: work_domain
     type: echo
     params:
-      echo: 'WORKDOMAIN.com'
+      echo: 'domain.net'
+      # echo: 'district65.net'
 
   - name: work_email
     type: echo
     params:
-      echo: '{{username}}@{{work_domain}}'
+      echo: '{{myusername}}@{{work_domain}}'
 
   - name: jobDesc
     type: echo
     params:
-      echo: 'Espanso wizard'
+      echo: 'job title'
+      #echo: |
+            Technology Specialist
+            Evanston Skokie School District 65
 
 # Dates and Time
-
+# you can then call these in the 'replace' section to use them.
   - name: mydate
     type: date
     params:
@@ -76,6 +94,7 @@ global_vars:
       format: "%H:%M %P"
 
   - name: longdt # long date time
-      type: date
-      params:
-        format: "{{mydate}}@{{stime}}"
+    type: date
+    params:
+      format: "{{mydate}}@{{stime}}"
+
